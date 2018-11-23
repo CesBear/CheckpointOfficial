@@ -1,41 +1,35 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Table } from 'react-materialize';
 
+const ModalTable = (props) => {
 
-class ModalTable extends Component {
-    render() {
-        return (
-            <div>
-                <Table>
-                    <thead>
-                    <tr>
-                        <th data-field="album">Album Name</th>
-                        <th data-field="name">Song Name</th>
-                        <th data-field="price">Album Price</th>
-                    </tr>
-                    </thead>
+    const desplegar = () => (
+        props.discography.map((disk, index) => (
+            <tr>
+                <td>{ disk.albumName }</td>
+                <td>{ disk.tracks }</td>
+                <td>{ disk.year }</td>
+                <td>{ disk.price }</td>
+            </tr>
+        ))
+    );
 
-                    <tbody>
-                    <tr>
-                        <td>White Pony</td>
-                        <td>Digital Bath</td>
-                        <td>$1.00</td>
-                    </tr>
-                    <tr>
-                        <td>To hell with motives</td>
-                        <td>On the Broken</td>
-                        <td>$0.99</td>
-                    </tr>
-                    <tr>
-                        <td>No se</td>
-                        <td>Danzón chingón</td>
-                        <td>$0.50</td>
-                    </tr>
-                    </tbody>
-                </Table>
-            </div>
-        );
-    }
-}
+    return (
+        <Table>
+            <thead>
+                <tr>
+                    <th>Album Name</th>
+                    <th>Tracks</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                { desplegar() }
+            </tbody>
+        </Table>
+    );
+};
 
 export default ModalTable;

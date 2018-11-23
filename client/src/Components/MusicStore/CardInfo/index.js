@@ -1,32 +1,59 @@
 import React, { Component } from 'react';
-import { CardTitle, Card, Col } from "react-materialize";
+import { CardTitle, Card, Col, Modal, Button } from "react-materialize";
 import ProductModal from "../ProductsModal";
+import ModalTable from "../ProductsModal/Table";
+import axios from 'axios';
+
 
 class CardInfo extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            discography: []
+        }
+    }
+
+    async componentDidMount() {
+        const discography = await axios.get('/api/disco/artist/'+this.props.artist_id);
+        this.setState({
+            discography: discography.data
+        })
+    }
 
     render() {
         return (
-            <Col m={5} s={12}>
-                <Card horizontal header={
-                    <CardTitle image="./cassete_default.png">
-                        <strong style={
-                            {color: 'black'}
-                        }
-                        >
-                            Deftones (aqui irá otro)
-                        </strong>
-                    </CardTitle>
-                } actions={
-                    [
-                        <ProductModal/>
-                    ]
-                }>
-                    <p> Aqui irá un metodo
-                    </p>
+            <div>
+                <Card
+                    horizontal
+                    header={
+                        <CardTitle image="./cassete_default.png">
+                            <strong style={{color: 'black'}}>
+                                { this.props.name }
+                            </strong>
+                        </CardTitle>
+                    }
+                    actions={[
+                        <div>
+                            <Modal
+                                header={
+                                    <p>{ this.props.name }</p>
+                                }
+                                fixedFooter
+                                trigger={
+                                    <Button>Check the Albums</Button>
+                                }
+                            >
+                                <ModalTable discography={this.state.discography}/>
+                            </Modal>
+                        </div>
+                    ]}
+                >
+                    <p>{ this.props.bio }</p>
                 </Card>
-            </Col>
+            </div>
         );
     }
 }
+
 
 export default CardInfo;

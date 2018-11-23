@@ -182,3 +182,19 @@ h6{
 }
 */
 /* Centered text */
+
+
+
+
+
+
+
+
+
+.card .card-image .card-title {
+    bottom: 35px;
+}
+
+.card.horizontal .card-image img {
+    opacity: .5;
+}
