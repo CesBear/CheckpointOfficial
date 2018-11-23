@@ -1,6 +1,9 @@
 {
   "name": "checkpoint3_v2",
   "version": "1.0.0",
+  "engines": {
+    "node": "11.0.0"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
