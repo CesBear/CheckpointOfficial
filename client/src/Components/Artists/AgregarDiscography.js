@@ -89,7 +89,7 @@ class AgregarDiscography extends Component {
                             s={3}
                             label="Price"
                             type='number'
-                            placeholder ='$15.99'
+                            placeholder ='15.99'
                             value={ this.props.price }
                             onChange={ (e) => this.handleChange(e, 'price') }
                         />
