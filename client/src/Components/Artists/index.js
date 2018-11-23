@@ -14,14 +14,15 @@ class Artists extends Component {
 
     desplegarArtistas = () => (
 
-        <Table hoverable={true}>
+        <Table id='table' hoverable={true}>
             <thead>
-                <tr>
+                <tr >
                     <th>Artist Name</th>
                     <th>Country</th>
                     <th>Genre</th>
-                    <th>Founded Year</th>
-                    <th>Active</th>
+                    <th className='header-row'>Founded Year</th>
+                    <th className='header-row'>Active</th>
+                    <th >Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,15 +32,15 @@ class Artists extends Component {
                           <td>{elem.name}</td>
                           <td>{elem.country}</td>
                           <td>{elem.genre}</td>
-                          <td>{elem.foundedYear}</td>
-                          <td>{elem.active}</td>
+                          <td className='header-row'>{elem.foundedYear}</td>
+                          <td className='header-row'>{elem.active}</td>
                           <td>
-                              <Link to={`/artists/${elem._id}/discography`}>
+                              <Link className='btn-small red'to={`/artists/${elem._id}/discography`}>
                                   <Icon>add</Icon>
                               </Link>
                           </td>
                           <td>
-                              <Link to={`/artists/${elem._id}`}>
+                              <Link className='btn-small red'to={`/artists/${elem._id}`}>
                                   <Icon>edit</Icon>
                               </Link>
                           </td>
@@ -62,7 +63,8 @@ class Artists extends Component {
                                       </span>
                                   }
                                   trigger={
-                                      <Button  className='blue accent-1' waves='light' icon='delete_outline'/>}>
+                                      <Button className='btn-small red' waves='red' icon='delete_outline'/>
+                                  }>
                                   <p> Are you sure you want to delete this artist?   <i className="fas fa-trash-alt"></i></p>
                               </Modal>
                           </td>
@@ -92,7 +94,7 @@ class Artists extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container bkg-img">
                 <h3>Artists <i className="fas fa-microphone-alt"></i></h3>
                 <p> If you as an Artist not listed below, please register in the button below.</p>
                 <AgregarArtista/>

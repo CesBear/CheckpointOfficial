@@ -53,7 +53,8 @@ h6{
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 
 @media screen and (max-width: 1300px) {
-  h1 {
+  h1,
+  h3{
     font-size: 55px;
   }
   .footerTxt{
@@ -61,23 +62,31 @@ h6{
   }
 }
 
-@media screen and (max-width:640px) {
-  .cassette {
+@media screen and (max-width:740px) {
+  #logoImage {
     display: none;
   }
 }
 
 @media screen and (max-width: 700px) and (min-width: 351px){
-  h1 {
+  h1,
+  h3 {
     font-size: 30px;
   }
   .footerTxt{
     font-size: 10px;
   }
+  #logoImage,
+  .header-row{
+    display: none;
+  }
+   #table {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 350px) {
-  h1 {
+  h1, h3 {
     font-size: 18px;
   }
   .top-left {
@@ -92,6 +101,12 @@ h6{
     transform: translate(-50%, -50%);
   }
   .footerTxt{
+    font-size: 10px;
+  }
+  #logoImage, .header-row {
+    display: none;
+  }
+  .mobile-font, #table {
     font-size: 10px;
   }
 }
@@ -130,7 +145,20 @@ h6{
   background-color: #26c6da !important;
 }
 
-
+.btn-small {
+  color: white;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 30px;
+  line-height: 32px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  max-font-size: 13pt;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
 /* Top right text
 .top-right {
   position: absolute;

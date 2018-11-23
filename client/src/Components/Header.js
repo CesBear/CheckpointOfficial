@@ -4,7 +4,7 @@ import { Navbar, NavItem } from 'react-materialize';
 const Header = (props) => (
         <Navbar id='header' className='cyan lighten-1'
                 brand ={
-                    <img src="./LeCassette.png" className='cassette' alt='logo'/>
+                    <img  id='logoImage' src="./LeCassette.png" className='cassette' alt='logo'/>
                 }
                 right
         >
