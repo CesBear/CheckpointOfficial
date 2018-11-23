@@ -8,7 +8,7 @@ const AboutUs = (props) =>
 
             <Row>
                 <Col s={12} m={3}>
-                    <Card header={
+                    <Card className="box-shadow" header={
                         <CardTitle reveal image={"./ale.png"}
                                    waves='light'
                         />}
@@ -20,14 +20,14 @@ const AboutUs = (props) =>
                 </Col>
 
                 <Col s={12} m={3}>
-                    <Card header={<CardTitle reveal image={"./jc.png"} waves='light'/>}
+                    <Card className="box-shadow" header={<CardTitle reveal image={"./jc.png"} waves='light'/>}
                           title="JC"
                           reveal={<p>Con antecedentes en áreas de la salud y administración de sistemas de salud.
                               Actualmente trabajando en Secretaría de Salud Jalisco.</p>}>
                     </Card>
                 </Col>
                 <Col s={12} m={3}>
-                <Card header={
+                <Card className="box-shadow" header={
                     <CardTitle reveal image={"./Ces.png"}
                                waves='light'
                     />}
@@ -38,7 +38,7 @@ const AboutUs = (props) =>
                 </Card>
             </Col>
                 <Col s={12} m={3}>
-                <Card header={<CardTitle reveal image={"./Checo.png"} waves='light'/>}
+                <Card className="box-shadow" header={<CardTitle reveal image={"./Checo.png"} waves='light'/>}
                       title="Checo"
                       reveal={<p> Gran Ingeniero con espiritú viajero. Actualmente esta en un proyecto implementanto SAP pero su pasión también es
                               el Front.

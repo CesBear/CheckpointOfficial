@@ -6,14 +6,14 @@ class CardInfo extends Component {
 
     render() {
         return (
-            <Col m={7} s={12}>
+            <Col m={5} s={12}>
                 <Card horizontal header={
                     <CardTitle image="./cassete_default.png">
                         <strong style={
                             {color: 'black'}
                         }
                         >
-                            Deftones
+                            Deftones (aqui irá otro)
                         </strong>
                     </CardTitle>
                 } actions={
@@ -21,7 +21,7 @@ class CardInfo extends Component {
                         <ProductModal/>
                     ]
                 }>
-                    <p> Band from USA and commited to update the gnre about Rock and R&B
+                    <p> Aqui irá un metodo
                     </p>
                 </Card>
             </Col>

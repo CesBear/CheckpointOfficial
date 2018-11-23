@@ -8,10 +8,10 @@ class ProductModal extends Component {
         return (
             <div>
                 <Modal
-                    header='Artist Albums'
+                    header={<p>Test</p>}
                     fixedFooter
                     trigger={
-                        <Button>Songs!</Button>
+                        <Button>Check the Albums</Button>
                     }>
                     <ModalTable/>
                 </Modal>

@@ -160,6 +160,12 @@ h6{
   -webkit-tap-highlight-color: transparent;
 }
 
+.box-shadow:hover {
+  -webkit-box-shadow: 4px 13px 49px -4px rgba(0,0,0,0.55);
+  -moz-box-shadow: 4px 13px 49px -4px rgba(0,0,0,0.55);
+  box-shadow: 4px 13px 49px -4px rgba(0,0,0,0.55);
+}
+
 
 /* Top right text
 .top-right {
