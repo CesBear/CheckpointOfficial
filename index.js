@@ -19,11 +19,10 @@ require('./server/routes/artistsRoute')(app);
 require('./server/routes/discographyRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('clients/build'));
+    app.use(express.static('client/build'));
     const path = require('path');
     app.get('*',(req, res) => {
-        res.sendFile(path.resolve(__dirname, 'clients', 'build', 'index.html'))
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
     });
 }
-
 app.listen(process.env.PORT||5000);
