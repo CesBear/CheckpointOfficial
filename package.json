@@ -4,14 +4,14 @@
   "engines": {
     "node": "11.0.0"
   },
-  "description": "",
+  "description": "test",
   "main": "index.js",
   "scripts": {
     "start" : "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js",
-    "client": "npm run start --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "clients": "npm run start --prefix clients",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix clients && npm run build --prefix clients"
   },
   "author": "",
   "license": "ISC",
