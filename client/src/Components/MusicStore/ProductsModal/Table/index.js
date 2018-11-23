@@ -9,7 +9,7 @@ const ModalTable = (props) => {
                 <td>{ disk.albumName }</td>
                 <td>{ disk.tracks }</td>
                 <td>{ disk.year }</td>
-                <td>{ disk.price }</td>
+                <td>$ { disk.price }</td>
             </tr>
         ))
     );
