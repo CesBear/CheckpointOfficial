@@ -9,6 +9,7 @@ import Store from "./MusicStore";
 import Artists from "./Artists";
 import EditarArtista from "./Artists/EditarArtista";
 import AgregarDiscography from "./Artists/AgregarDiscography";
+import AboutUs from "./AboutUs";
 
 const App  = () =>
 (
@@ -21,7 +22,7 @@ const App  = () =>
                 <Route exact path="/artists/:id" component = { EditarArtista }/>
                 <Route exact path="/artists/:id/discography" component ={AgregarDiscography}/>
                 <Route exact path="/store" component ={Store}/>
-                <Route exact path="/about-us"/>
+                <Route exact path="/about-us" component = {AboutUs}/>
                 <FooterInfo/>
             </div>
         </BrowserRouter>
