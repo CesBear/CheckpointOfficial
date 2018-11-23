@@ -35,7 +35,7 @@ export const enviarForma = (valores, artists) => async (dispatch) => {
         artists.unshift(response.data);
         dispatch({ type: EXITOSO_ARTISTS, payload: artists });
         window.Materialize.toast('Artist saved successfully.', 5*1000);
-        window.location.reload()
+        window.location.reload();
     }
     catch(error) {
         dispatch({type: FALLO_ARTISTS, payload: error.message});
@@ -53,7 +53,7 @@ export const llamarEditado = (id) => async (dispatch) => {
     }
     catch(error) {
         dispatch({type: FALLO_ARTISTS, payload: error.message});
-        window.Materialize.toast('Intente más tarde.', 5*1000, 'red');
+        window.Materialize.toast('Try later.', 5*1000, 'red');
     }
 };
 
@@ -65,7 +65,6 @@ export const enviarEditado = (id, valores, artists) => async (dispatch) => {
     dispatch ({type: LLAMAR_ARTISTS});
 
     try {
-
         const response = await axios.put(`/api/artists/${id}`, valores);
         window.Materialize.toast('Artist updated successfully.', 5*1000);
         console.log(response);

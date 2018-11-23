@@ -63,6 +63,7 @@ class AgregarArtista extends Component {
                             s={3}
                             label="Country"
                             placeholder ='México'
+                            type='text'
                             value={this.props.artists.country}
                             onChange={
                                 (event) => this.handleChange(event, ARTIST_COUNTRY)
@@ -83,7 +84,8 @@ class AgregarArtista extends Component {
                         <Input
                             s={6}
                             label="Still active?"
-                            placeholder =' '
+                            placeholder ='Yes / No'
+                            type = 'text'
                             value={this.props.artists.active}
                             onChange={
                                 (event) => this.handleChange(event, ARTIST_ACTIVE)
@@ -94,6 +96,7 @@ class AgregarArtista extends Component {
                             s={6}
                             label="Founded Year?"
                             placeholder ='1975'
+                            type = 'number'
                             value={this.props.artists.foundedYear}
                             onChange={
                                 (event) => this.handleChange(event, ARTIST_FOUNDED_YEAR)
@@ -103,7 +106,7 @@ class AgregarArtista extends Component {
                         <Input
                             s={12}
                             label="Bio"
-                            type='text'
+                            type='textarea'
                             placeholder ='Bried artis biography '
                             value={this.props.artists.bio}
                             onChange={
@@ -126,7 +129,6 @@ class AgregarArtista extends Component {
         );
     }
 }
-
 
 const mapStateToProps = ({ artistsReducer }) => {
     return artistsReducer;

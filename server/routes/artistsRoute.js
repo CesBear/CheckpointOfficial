@@ -1,7 +1,6 @@
 const artistsMiddleware = require('../middlewares/artistsMiddleware');
 const Artists = require('../models/Artists');
 
-
 module.exports = (app) => {
 
     app.get('/api', (req, res) => {
@@ -26,8 +25,6 @@ module.exports = (app) => {
 
 		async (req, res) => {
 		const { name, country,  genre, active, foundedYear, bio } = req.body;
-
-
 		const artistPost = new Artists({
 			name,
             country,
@@ -47,13 +44,11 @@ module.exports = (app) => {
         artistsMiddleware.validData,
 		async (req, res) => {
 		const { name, country,  genre, active,foundedYear, bio } = req.body;
-            console.log(foundedYear);
             const response = await Artists.findOneAndUpdate(
 			{ _id: req.params.id }, 
 			{ name, country,  genre, active,foundedYear, bio},
 			{ new: true }
 		).exec();
-            console.log(response);
             res.send(response);
 
 	});
@@ -75,9 +70,7 @@ module.exports = (app) => {
 
     app.delete('/api/artists/:id', async (req, res) => {
 		const response = await Artists.deleteOne({ _id: req.params.id });
-
-		console.log(response, 'res');
-		res.send('success');
+		res.send(response);
 		}
 	);
 };

@@ -12,20 +12,20 @@ import AgregarDiscography from "./Artists/AgregarDiscography";
 
 const App  = () =>
 (
-        <div>
-            <BrowserRouter>
-                <div>
-                    <Header/>
-                    <Route exact path="/" component={HeroImage}/>
-                    <Route exact path="/artists" component = {Artists}/>
-                    <Route exact path="/artists/:id" component = { EditarArtista }/>
-                    <Route exact path="/artists/:id/discography" component ={AgregarDiscography}/>
-                    <Route exact path="/store" component ={Store}/>
-                    <Route exact path="/about-us"/>
-                    <FooterInfo/>
-                </div>
-            </BrowserRouter>
-        </div>
+    <div>
+        <BrowserRouter>
+            <div>
+                <Header/>
+                <Route exact path="/" component={HeroImage}/>
+                <Route exact path="/artists" component = {Artists}/>
+                <Route exact path="/artists/:id" component = { EditarArtista }/>
+                <Route exact path="/artists/:id/discography" component ={AgregarDiscography}/>
+                <Route exact path="/store" component ={Store}/>
+                <Route exact path="/about-us"/>
+                <FooterInfo/>
+            </div>
+        </BrowserRouter>
+    </div>
 );
 
 export default App;

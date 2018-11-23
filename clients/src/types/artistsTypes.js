@@ -4,7 +4,7 @@ export const FALLO_ARTISTS = 'artists_fallo';
 
 
 //CRUD actions
-export const EDIT_ARTIST = 'artists_edit';
+export const EDIT_ARTIST = 'artist_edit';
 export const DELETE_ARTIST = 'artist_delete';
 export const PRIMER_GET = 'primer_get';
 export const EMPTY_ARTIST_FORM = 'artist_clean_form';
@@ -25,7 +25,4 @@ export const EDIT_ARTIST_COUNTRY = 'edit_artist_country';
 export const EDIT_ARTIST_ACTIVE = 'edit_artist_active';
 export const EDIT_ARTIST_FOUNDED_YEAR = 'edit_artist_founded_year';
 export const EDIT_ARTIST_GENRE = 'edit_artist_genre';
-
-//
-
 

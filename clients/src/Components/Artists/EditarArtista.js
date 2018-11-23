@@ -31,7 +31,7 @@ class EditarArtista extends Component {
         } = this.props.edit_artist;
         foundedYear = parseInt(foundedYear);
         const valores = { name, country, genre, active, foundedYear, bio };
-        console.log(valores);
+
         this.props.enviarEditado(this.props.edit_artist._id, valores, this.props.artists);
     };
 
@@ -55,6 +55,7 @@ class EditarArtista extends Component {
                 <Input
                     s={3}
                     label="Country"
+                    type='text'
                     placeholder = "México"
                     value={this.props.edit_artist.country}
                     onChange={
@@ -98,7 +99,7 @@ class EditarArtista extends Component {
                 <Input
                     s={12}
                     label="Bio"
-                    type='text'
+                    type='textarea'
                     placeholder = "Bio details or some kind of history"
                     value={this.props.edit_artist.bio}
                     onChange={
@@ -128,8 +129,6 @@ class EditarArtista extends Component {
         );
     }
 }
-
-
 
 const mapStateToProps = ({ artistsReducer }) => {
     return artistsReducer;

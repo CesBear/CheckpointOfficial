@@ -3,7 +3,6 @@ import {Input, Row } from 'react-materialize'
 
 class AgregarDiscography extends Component {
 
-
     render() {
         return (
             <div className="container">
@@ -54,7 +53,6 @@ class AgregarDiscography extends Component {
             </div>
         );
     }
-
 }
 
 export default AgregarDiscography;
