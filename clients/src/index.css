@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;}
+
+
+.heroImgs {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+}
+
+/* Container holding the image and the text */
+.containerImage {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: #26c6da !important;
+}
+
+/* Bottom left text
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text*/
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Pacifico', cursive;
+
+}
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+
+@media screen and (max-width: 1300px) {
+  h1 {
+    font-size: 55px;
+  }
+  .footerTxt{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:640px) {
+  .cassette {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) and (min-width: 351px){
+  h1 {
+    font-size: 30px;
+  }
+  .footerTxt{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 18px;
+  }
+  .top-left {
+    position: absolute;
+    left: 8px;
+    margin-top: 0;
+  }
+  .centered {
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+  .footerTxt{
+    font-size: 10px;
+  }
+}
+
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.footerTxt{
+  font-size: 30px;
+}
+
+.spacing {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+
+.cassette {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.containerImage2 {
+  width: auto;
+  max-height: 50%;
+  text-align: center;
+  color: white;
+  background-color: #26c6da !important;
+}
+
+
+/* Top right text
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+*/
+/* Bottom right text
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+*/
+/* Centered text */
