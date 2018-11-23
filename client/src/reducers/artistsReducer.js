@@ -65,7 +65,7 @@ export default (state = INITIAL_STATE, action) =>
         case EDIT_ARTIST_ACTIVE: return { ...state, edit_artist: {...state.edit_artist, active: action.payload }};
         case EDIT_ARTIST_FOUNDED_YEAR: return { ...state, edit_artist: {...state.edit_artist, foundedYear: action.payload }};
         case EDIT_ARTIST_GENRE: return { ...state,edit_artist: {...state.edit_artist, genre: action.payload }};
-        case EDIT_ARTIST: return {...state, edit_artist: {...state,edit_artist: action.payload, cargando: false, error:''}};
+        case EDIT_ARTIST: return {...state, edit_artist: action.payload, cargando: false, error:''};
 
         case PRIMER_GET: return {...state, primer_get:true};
         default: return state;

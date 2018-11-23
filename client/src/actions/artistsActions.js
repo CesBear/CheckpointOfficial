@@ -5,7 +5,7 @@ import {
     EXITOSO_ARTISTS,
     PRIMER_GET,
     EDIT_ARTIST,
-    DELETE_ARTIST,
+    DELETE_ARTIST, EMPTY_ARTIST_FORM,
 } from '../types/artistsTypes';
 
 export const traerArtistas = () => async (dispatch) =>
@@ -33,9 +33,11 @@ export const enviarForma = (valores, artists) => async (dispatch) => {
     try {
         const response = await axios.post('/api/artists', valores);
         artists.unshift(response.data);
-        dispatch({ type: EXITOSO_ARTISTS, payload: artists });
+        dispatch({
+            type: EXITOSO_ARTISTS,
+            payload: artists
+        });
         window.Materialize.toast('Artist saved successfully.', 5*1000);
-        window.location.reload();
     }
     catch(error) {
         dispatch({type: FALLO_ARTISTS, payload: error.message});
@@ -48,7 +50,6 @@ export const llamarEditado = (id) => async (dispatch) => {
     dispatch ({type: LLAMAR_ARTISTS});
     try {
         const response = await axios.get(`/api/artists/${id}`);
-        console.log(response);
         dispatch ({ type: EDIT_ARTIST, payload: response.data[0] })
     }
     catch(error) {
@@ -66,13 +67,17 @@ export const enviarEditado = (id, valores, artists) => async (dispatch) => {
 
     try {
         const response = await axios.put(`/api/artists/${id}`, valores);
-        window.Materialize.toast('Artist updated successfully.', 5*1000);
-        console.log(response);
         artists.unshift(response.data);
         dispatch({
             type: EXITOSO_ARTISTS,
             payload: artists
         });
+        dispatch({
+            type: EMPTY_ARTIST_FORM,
+            payload: artists
+        });
+        window.Materialize.toast('Artist updated successfully.', 5*1000);
+
     }
     catch(error) {
         dispatch({type: FALLO_ARTISTS, payload: error.message});

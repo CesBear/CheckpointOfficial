@@ -2,9 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const keys = require('./server/config/keys');
+mongoose.connect(keys.mongoConnection);
+
 const app = express();
 
-mongoose.connect(keys.mongoConnection);
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", '*');
@@ -25,4 +26,5 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
     });
 }
-app.listen(process.env.PORT||5000);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);

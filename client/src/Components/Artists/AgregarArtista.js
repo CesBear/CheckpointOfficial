@@ -18,7 +18,7 @@ class AgregarArtista extends Component {
 
     enviar = async () => {
 
-        const {
+        let {
             name,
             bio,
             country,
@@ -27,7 +27,7 @@ class AgregarArtista extends Component {
             genre,
             discography
         } = this.props;
-
+        foundedYear = parseInt(foundedYear);
         const valores = { name, bio, country, active, foundedYear, genre, discography };
 
         this.props.enviarForma(valores, this.props.artists);
