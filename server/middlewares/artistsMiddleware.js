@@ -30,7 +30,7 @@ module.exports = (() => {
         const { name, country, genre, active, bio } = req.body;
 
         if (name.trim().length > 30) return res.send('Name field  limited to 30 chars length max.');
-        if (active.trim().length > 3) return res.send('Active field limited to 3 chars length max.');
+        if (active.trim().length > 10) return res.send('Active field limited to 10 chars length max.');
         if (country.trim().length > 30) return res.send('Country field limited to 30 chars length max.');
         if (bio.trim().length > 100) return res.send('Bio field  limited to 100 chars length max.');
         if (genre.trim().length > 50) return res.send('Genre field  limited to 50 chars length max.');

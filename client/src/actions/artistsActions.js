@@ -72,10 +72,6 @@ export const enviarEditado = (id, valores, artists) => async (dispatch) => {
             type: EXITOSO_ARTISTS,
             payload: artists
         });
-        dispatch({
-            type: EMPTY_ARTIST_FORM,
-            payload: artists
-        });
         window.Materialize.toast('Artist updated successfully.', 5*1000);
 
     }
