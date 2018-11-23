@@ -5,7 +5,7 @@ import {
     EXITOSO_ARTISTS,
     PRIMER_GET,
     EDIT_ARTIST,
-    DELETE_ARTIST, EMPTY_ARTIST_FORM,
+    DELETE_ARTIST,
 } from '../types/artistsTypes';
 
 export const traerArtistas = () => async (dispatch) =>
