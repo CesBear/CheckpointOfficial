@@ -3,9 +3,6 @@ const Artists = require('../models/Artists');
 
 
 module.exports = (app) => {
-    app.get('/', (req, res) => {
-        res.send({ message: 'Checkpoint 3 api working' });
-    });
 
     app.get('/api', (req, res) => {
         res.send({ message: 'Api is loading' });

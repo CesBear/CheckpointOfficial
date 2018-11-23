@@ -13,7 +13,7 @@ export const traerArtistas = () => async (dispatch) =>
     dispatch({ type: LLAMAR_ARTISTS });
 
     try {
-        const response = await axios.get('http://localhost:5000/api/artists');
+        const response = await axios.get('/api/artists');
         response.data.reverse();
         dispatch({ type: EXITOSO_ARTISTS, payload: response.data });
         dispatch({ type: PRIMER_GET});
@@ -31,7 +31,7 @@ export const enviarForma = (valores, artists) => async (dispatch) => {
     dispatch ({type: LLAMAR_ARTISTS});
 
     try {
-        const response = await axios.post('http://localhost:5000/api/artists', valores);
+        const response = await axios.post('/api/artists', valores);
         artists.unshift(response.data);
         dispatch({ type: EXITOSO_ARTISTS, payload: artists });
         window.Materialize.toast('Artist saved successfully.', 5*1000);
@@ -47,7 +47,7 @@ export const llamarEditado = (id) => async (dispatch) => {
 
     dispatch ({type: LLAMAR_ARTISTS});
     try {
-        const response = await axios.get(`http://localhost:5000/api/artists/${id}`);
+        const response = await axios.get(`/api/artists/${id}`);
         console.log(response);
         dispatch ({ type: EDIT_ARTIST, payload: response.data[0] })
     }
@@ -66,7 +66,7 @@ export const enviarEditado = (id, valores, artists) => async (dispatch) => {
 
     try {
 
-        const response = await axios.put(`http://localhost:5000/api/artists/${id}`, valores);
+        const response = await axios.put(`/api/artists/${id}`, valores);
         window.Materialize.toast('Artist updated successfully.', 5*1000);
         console.log(response);
         artists.unshift(response.data);
@@ -84,7 +84,7 @@ export const enviarEditado = (id, valores, artists) => async (dispatch) => {
 export const borrarUsuario = (id) => async (dispatch) => {
     dispatch ({type: DELETE_ARTIST});
     try {
-        const response = await axios.delete(`http://localhost:5000/api/artists/${id}`);
+        const response = await axios.delete(`/api/artists/${id}`);
         window.Materialize.toast('Artist Deleted Successfully.', 5*1000);
         window.location.reload()
     }
