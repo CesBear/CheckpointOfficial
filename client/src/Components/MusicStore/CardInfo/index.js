@@ -40,7 +40,7 @@ class CardInfo extends Component {
                                 }
                                 fixedFooter
                                 trigger={
-                                    <Button>Check the Albums</Button>
+                                    <Button>Albums</Button>
                                 }
                             >
                                 <ModalTable discography={this.state.discography}/>
