@@ -11,7 +11,7 @@ class ProductModal extends Component {
                     header={<p>Test</p>}
                     fixedFooter
                     trigger={
-                        <Button>Check the Albums</Button>
+                        <Button>Albums</Button>
                     }>
                     <ModalTable/>
                 </Modal>
