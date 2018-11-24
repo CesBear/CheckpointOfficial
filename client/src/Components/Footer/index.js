@@ -5,7 +5,7 @@ const FooterInfo = () => {
     return (
         <Footer  copyrights="Copyright 2018"
                 moreLinks={
-                    <a className="grey-text text-lighten-4 right" href="https://www.facebook.com/"> Visit us at:   <i className="fab fa-facebook-square"></i></a>
+                    <a className="grey-text text-lighten-4 right" href="https://www.facebook.com/Le-Casseterie-1171711746316735"> Visit us at:   <i className="fab fa-facebook-square"></i></a>
                 }
                 className='cyan lighten-1'
         >
