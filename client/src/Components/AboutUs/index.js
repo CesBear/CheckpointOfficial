@@ -33,14 +33,14 @@ const AboutUs = (props) =>
                     />}
                       title="Cesar"
                       reveal={
-                          <p>Tester de profesión pero Dev de corazón, actualmente está en transición de SDET hacia FullStack Engineer</p>
+                          <p>Tester de profesión pero Dev de corazón. Actualmente en transición de SDET hacia FullStack Engineer</p>
                       }>
                 </Card>
             </Col>
                 <Col s={12} m={3}>
                 <Card className="box-shadow" header={<CardTitle reveal image={"./Checo.png"} waves='light'/>}
                       title="Checo"
-                      reveal={<p> Gran Ingeniero con espiritú viajero. Actualmente esta en un proyecto implementanto SAP pero su pasión también es
+                      reveal={<p> Gran Ingeniero con espiritú viajero. Actualmente en un proyecto implementanto SAP pero su pasión también es
                               el Front.
                       </p>}>
                 </Card>

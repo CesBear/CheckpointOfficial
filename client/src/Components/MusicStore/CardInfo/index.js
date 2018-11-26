@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { CardTitle, Card, Col, Modal, Button } from "react-materialize";
-import ProductModal from "../ProductsModal";
+import { CardTitle, Card, Modal, Button } from "react-materialize";
 import ModalTable from "../ProductsModal/Table";
 import axios from 'axios';
 
